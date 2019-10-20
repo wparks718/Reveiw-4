@@ -15,24 +15,40 @@
 
 /* Transition Styles */
 nav#topLinks a {
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
   font-size: 1em;
+  letter-spacing: 0em;
   text-shadow: rgba(0, 0, 0, 1) 1px -1px 1px;
-  transition: color 1.5s ease-in 0.5s,
-              font-size 2s ease,
-              text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
+  transition: color 1.2s ease-in 0.5s,
+                    font-size 1.2s linear,
+                    letter-spacing 1.2s linear,
+                    text-shadow 1.2s cubic-bezier(0.6, 0, 0.8, 0.5);
 }
 
-
-
+nav#topLinks a:hover {
+  color: rgb(255, 183, 25);
+  font-size: 3em;
+  letter-spacing: 0.1em;
+  text-shadow: rgba(0, 0, 0, 0.5) 15px -3px 8px;
+}
 /* Marquee Styles */
-
-
-
-
+div#marquee {
+   position: relative;
+}
+div#marquee table {
+   position: relative;
+}
 /* Keyframe Styles */
 
-
-
+@keyframes scroll {
+   0% {top: 250px;}
+   100% {top: -1300px;}
+}
 
 /* Animation Styles */
+div#marquee table{
+   animation: scroll 50s linear infinite;
+}
+div#marquee:hover table {
+   animation-play-state: paused;
+}
